@@ -10,12 +10,27 @@
   body {
     color: blanchedalmond;
     background-color: steelblue;
+    
+  }
+
+  li {
+    text-transform: lowercase;
+        
+  }
+
+  li::first-letter {
+      text-transform: uppercase;
+        
   }
 </style>
 </head>
 <body>
 <h1>Welcome to gitPub</h1>  
-
+<ul>
+  <% for(let i = 0; i < allDrinks.length; i++) { %>
+    <li> <%= allDrinks[i].name %></li>
+    <% } %>
+</ul>
   
 </body>
 </html>
