@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-<style type="text/css">
-  body {
-    color: blanchedalmond;
-    background-color: steelblue;
-    
-  }
+  <style type="text/css">
+    body {
+      color: blanchedalmond;
+      background-color: steelblue;
 
-  li {
-    text-transform: lowercase;
-        
-  }
+    }
 
-  li::first-letter {
+    li {
+      text-transform: lowercase;
+
+    }
+
+    li::first-letter {
       text-transform: uppercase;
-        
-  }
-</style>
+
+    }
+  </style>
 </head>
+
 <body>
-<h1>Welcome to gitPub</h1>  
-<ul>
-  <% for(let i = 0; i < allDrinks.length; i++) { %>
-    <li> <%= allDrinks[i].name %></li>
-    <% } %>
-</ul>
-  
+  <h1>Welcome to gitPub</h1>
+  <ul>
+    <% for(let i=0; i < allDrinks.length; i++) { %>
+      <li>
+        <%= allDrinks[i].name %>
+      </li>
+      <% } %>
+  </ul>
+
 </body>
+
 </html>

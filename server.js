@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const drinks = require("./models/drinks.js");
 
+//Routes
+// Index
 app.get('/drinks/', (req, res) => {
   // let names = (drinks[req.params.index]);
   res.render("drinks_index.ejs", {
@@ -9,10 +12,14 @@ app.get('/drinks/', (req, res) => {
   });
 });
 
+// Show
+app.get('/drinks/:indexOfDrinks', (req, res) =>{
+  res.render('drinks_show.ejs', {
+      drink: drinks[req.params.indexOfDrinks]
+  });
+
+});
+
 app.listen(port, () => {
   // console.log("Hi there")
 });
-// Running into a 404 error
-
-const drinks = require("./models/drinks.js")
-// require ^
